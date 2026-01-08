@@ -11,7 +11,7 @@ import Navigation from "@/components/navigation";
 
 async function getProjectData(projectId: string) {
   try {
-    const res = await fetch(`https://api-chanakya.brahmaastra.ai/projects/project/${projectId}`, { cache: "no-store" });
+    const res = await fetch(`https://malhar.brahmaastra.ai/projects/project/${projectId}`, { cache: "no-store" });
     if (!res.ok) return null;
     const data = await res.json();
     return data.data?.data || null;
@@ -23,7 +23,7 @@ async function getProjectData(projectId: string) {
 
 async function getUserData(userId: string) {
   try {
-    const res = await fetch(`https://api-chanakya.brahmaastra.ai/users/${userId}`, { cache: "no-store" });
+    const res = await fetch(`https://malhar.brahmaastra.ai/users/${userId}`, { cache: "no-store" });
     if (!res.ok) return null;
     const data = await res.json();
     return data.data?.data || null;
